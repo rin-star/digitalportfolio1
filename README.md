@@ -1,3 +1,45 @@
+# Hyunrin Ryu — Digital Portfolio
+
+A clean, animated personal portfolio built with HTML, CSS and small animation scripts (Three.js canvas background + GSAP). Shows resume, experience, programs, awards, and a downloadable resume link.
+
+## Preview
+Open index.html in your browser or run a local server:
+- In VS Code integrated terminal (Windows): npx live-server .
+- Or use the Live Server extension and click "Go Live".
+
+## Features
+- Blue-themed responsive layout
+- Canvas background (three-bg.js)
+- GSAP scroll and hover animations (script.js)
+- Clear, card-based resume sections with bullet lists
+- Downloadable resume (Google Docs or local PDF)
+
+## Quick file map
+- index.html — main page and content
+- styles.css — theme, layout, responsive styles
+- script.js — GSAP animations + interactions
+- three-bg.js — optional animated canvas background
+- README.md — this file
+
+## How to update the resume link
+- To use a local PDF: add `resume.pdf` to the project root and update the link in index.html:
+  <a href="./resume.pdf" class="badge" target="_blank" rel="noopener">Download Resume</a>
+- To use your Google Doc (shared view link) you already added — ensure sharing is set to "Anyone with the link can view".
+
+## Customize
+- Colors: edit :root variables in styles.css (--accent, --accent-2, --bg1).
+- Animation timing: adjust values in script.js (gsap.from / scrollTrigger).
+- Add more cards: duplicate existing `.card` blocks in index.html and update text.
+
+## Troubleshooting
+- If animations don't run, confirm GSAP and ScrollTrigger scripts are loaded (check browser console).
+- If the canvas is black or missing, ensure three-bg.js is present and three.js CDN is reachable.
+
+## License
+Personal project. Use or adapt for portfolio purposes.
+
+---
+
 # 📁 Digital Portfolio Template
 
 A simple, beginner-friendly HTML portfolio template for students and teachers to create and host a professional digital portfolio using GitHub Pages.
