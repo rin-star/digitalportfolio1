@@ -1,110 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Webpage Title (will show on tab) -->
-    <title>Professional Portfolio</title>
-    <style>
-        /* Basic styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            margin: 1rem 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        section {
-            padding: 2rem;
-            border-bottom: 1px solid #ddd;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hyunrin Ryu | 3D Portfolio</title>
+
+  <!-- UI font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#credentials">Credentials</a>
-            <a href="#contact">Contact Info</a>
-        </nav>
-    </header>
+  <canvas id="bg"></canvas>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
+  <header class="hero">
+    <div class="container">
+      <h1>Hyunrin Ryu</h1>
+      <p>Engineering Mindset • Leadership • STEM Innovation</p>
+    </div>
+  </header>
+
+  <section class="container">
+
+    <!-- About + Contact -->
+    <div class="about">
+      <div class="bio card">
+        <div class="section-title">
+          <h2>About</h2>
+          <div class="section-sub">11th grade student focused on STEM, leadership & growth.</div>
+        </div>
         <p>
-            <!-- Add a brief introduction about yourself here -->
-            Hello! My name is [Your Name]. I am passionate about [your interests or profession]. 
-            Welcome to my portfolio website!
+          Dedicated and flexible student at Patrick Henry High School seeking hands-on opportunities
+          to gain experience and develop skills in STEM and leadership. Strong collaborator with
+          time-management and problem-solving strengths.
         </p>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>
-            <!-- Add a list or description of your projects here -->
-            Here are some of the projects I have worked on:
-        </p>
-        <ul>
-            <li>Project 1: [Brief description] <a href="[link to project repository]" target="_blank">[Project repository]</a></li>
-            <li>Project 2: [Brief description] <a href="[link to project repository]" target="_blank">[Project repository]</a></li>
-        </ul>
-    </section>
+        <div style="margin-top:12px;">
+          <div class="section-title"><h2>Highlights</h2></div>
+          <div class="grid" style="grid-template-columns:repeat(3,1fr);">
+            <div class="card"><span class="badge">Leadership</span></div>
+            <div class="card"><span class="badge">STEM</span></div>
+            <div class="card"><span class="badge">Community</span></div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Credentials Section -->
-    <section id="credentials">
-        <h2>Credentials</h2>
-        <p>
-            <!-- Add your credentials, certifications, or achievements here -->
-            I have earned the following certifications and achievements:
-        </p>
-        <ul>
-            <li>Certification 1: [Details]</li>
-            <li>Certification 2: [Details]</li>
-            <li>Certification 3: [Details]</li>
-            <!-- Add images of your certification digital badges -->
-        </ul>
-    </section>
+      <aside class="contact">
+        <div class="section-title"><h2>Contact</h2></div>
+        <p>(619) 576-4224</p>
+        <p>hyunrin.ryu@gmail.com</p>
+        <div style="margin-top:10px;">
+          <a href="mailto:hyunrin.ryu@gmail.com" class="badge">Email</a>
+          <a href="https://docs.google.com/document/d/1rCuvMqvNBcrFSSdEdeAg_D7dBdmwWC09Vpz3XpY2dzM/edit?tab=t.0#heading=h.ymi089liagec" class="badge" style="margin-left:8px" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+      </aside>
+    </div>
 
-    <!-- Contact Info Section -->
-    <section id="contact">
-        <h2>Contact Info</h2>
-        <p>
-            <!-- Add your contact information here -->
-            Feel free to reach out to me:
-        </p>
-        <ul>
-            <li>Email: [your-email@example.com]</li>
-            <li>LinkedIn: <a href="[your-linkedin-profile]" target="_blank">[Your LinkedIn]</a></li>
-        </ul>
-    </section>
+    <!-- Experience -->
+    <div style="margin-top:18px;">
+      <div class="section-title">
+        <h2>Experience & Achievements</h2>
+        <div class="section-sub">Competitive achievements, robotics, NJROTC, and athletics</div>
+      </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-    </footer>
+      <div class="grid" id="experience-grid">
+        <div class="card">
+          <strong>FRC Robotics — President</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2023–Present</li>
+            <li>Industrial Design Award; Quality Award; Regional Finalist (2024–2025)</li>
+            <li>Led club activities, mentoring, and outreach</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>FLL / FRC Competitions</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>Champion — 2023 Robotics Park Spring Showdown</li>
+            <li>Champion — 2022 SuperPowered Mission Bay Qualifying</li>
+            <li>Champion — 2021 Cargo Connect Mission Bay Qualifying</li>
+            <li>Multiple regional awards (2015–2025)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Taekwondo — 3rd Degree Black Belt</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2014–2023</li>
+            <li>1st — 2017 California State Open Taekwondo Championship</li>
+            <li>1st — 2018 San Diego Championship</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>NJROTC — Navy League</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2023–2025</li>
+            <li>1st Place — Paloma Valley Competition</li>
+            <li>2nd Place — Personal Inspection, Paloma Valley Field Meet 2023</li>
+            <li>Multiple top placements in regional field meets (2023–2025)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Badminton — Junior Varsity</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2024 — 2nd at CIF</li>
+            <li>2025 — CIF Champions</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Community & Volunteering</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>100+ volunteer hours (2023–Present)</li>
+            <li>Tutoring: CCTE-Thinklist — Math tutoring (36+ hours)</li>
+            <li>STEM outreach with Elementary Institute of Science</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Programs / Internships -->
+    <div style="margin-top:18px;">
+      <div class="section-title"><h2>Programs & Internships</h2></div>
+      <div class="grid">
+        <div class="card">
+          <strong>TEACH LEAD San Diego CTE</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2025 — Paid education internship</li>
+            <li>Assisted in elementary classrooms and led lesson activities</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Supervisor Joel Anderson — Civic Internship</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2025 — Supported community events</li>
+            <li>Researched local policies and learned about public service</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Girls Who Code & Kode with Klossy</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2025 — Completed coding programs focused on web/app development</li>
+            <li>Hands-on projects and workshops</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Elementary Institute of Science</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2025 — Supported instructors</li>
+            <li>Led hands-on STEM activities for youth</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education / Skills (split) -->
+    <div style="margin-top:18px; display:grid; gap:12px;">
+      <div class="grid">
+        <div class="card">
+          <strong>Education</strong>
+          <div style="color:var(--muted); margin-top:6px;">
+            Patrick Henry High School — Class of 2027<br>
+            Junior GPA: 3.83 UW / 4.44 W
+          </div>
+        </div>
+
+        <div class="card">
+          <strong>Skills</strong>
+          <div class="skills" style="margin-top:8px;">
+            <span class="badge">Leadership</span>
+            <span class="badge">Teamwork</span>
+            <span class="badge">Time Mgmt</span>
+            <span class="badge">Web Dev</span>
+            <span class="badge">STEM Outreach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Awards & Honors (new separate section) -->
+    <div style="margin-top:18px;">
+      <div class="section-title">
+        <h2>Awards & Honors</h2>
+        <div class="section-sub">Selected recognitions, academic awards, and certificates</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>School Honors</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>Principal’s Honor Roll (2023–2025)</li>
+            <li>Pershing Middle School — Excellence awards & 4.0 GPA (2020–2023)</li>
+            <li>William G. Matthie 4.0 GPA Award</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>NJROTC & Athletics</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>2023 Freshman Battalion Distinguished Cadet</li>
+            <li>Elks Awardee (2025)</li>
+            <li>Multiple field meet placements and team awards (2023–2025)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Competitions & Certificates</strong>
+          <ul style="color:var(--muted); margin-top:8px; text-align:left;">
+            <li>Robotics awards: Quality & Industrial Design (2024–2025)</li>
+            <li>University of Arizona — STEMM Camp certificate (2023)</li>
+            <li>City of San Diego — Certificate of Recognition (2019)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Contact: hyunrin.ryu@gmail.com • (619) 576-4224</p>
+  </footer>
+
+  <!-- libraries and scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="three-bg.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
